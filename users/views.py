@@ -4,9 +4,9 @@ from rest_framework.generics import (
 )
 from django.db.models import Q
 from rest_framework import pagination
-from rest_framework.permissions import (IsAuthenticatedOrReadOnly, IsAuthenticated)
 from .serializers import UserSerializer, User
 from core.pagination import PostLimitOffsetPagination
+from django.core.cache import cache
 
 
 class UserListAPIView(ListAPIView):
@@ -27,7 +27,7 @@ class UserListAPIView(ListAPIView):
                 Q(email__icontains=query) |
                 Q(username__icontains=query)
             )
-
+        cache.set('users', queryset_list, timeout=300)
         return queryset_list.order_by('-id')
 
 
