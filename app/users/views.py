@@ -5,7 +5,7 @@ from rest_framework.generics import (
 from django.db.models import Q
 from rest_framework import pagination
 from .serializers import UserSerializer, User
-from core.pagination import PostLimitOffsetPagination
+from app.core.pagination import PostLimitOffsetPagination
 from django.core.cache import cache
 
 
