@@ -1,0 +1,19 @@
+# Compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Database (if using SQLite)
+db.sqlite3
+
+# Django secret key and environment variables
+.env
+
+# Static and media files (optional)
+staticfiles/
+media/
+
+# IDE and OS-specific files
+.vscode/
+.idea/
+.DS_Store
