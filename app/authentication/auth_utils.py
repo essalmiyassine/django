@@ -1,11 +1,13 @@
 import jwt
 from jwt import PyJWKClient
+from django.conf import settings
 
-JWKS_URL = "http://localhost:8080/realms/django/protocol/openid-connect/certs"
+jwk_uri = settings.OAUTH2_JWKS_URI
+audience = settings.OAUTH2_AUDIENCE
 
 class OAuth2TokenValidator:
     def __init__(self):
-        self.jwks_client = PyJWKClient(JWKS_URL)
+        self.jwks_client = PyJWKClient(jwk_uri)
 
     def get_public_key(self, token):
         signing_key = self.jwks_client.get_signing_key_from_jwt(token)
@@ -18,7 +20,7 @@ class OAuth2TokenValidator:
                 token,
                 public_key,
                 algorithms=["RS256"],  # Ensure this matches your provider
-                audience="account",  # Validate against expected audience
+                audience=audience,
                 options={"verify_exp": True}
             )
             return decoded_token  # Return claims if valid

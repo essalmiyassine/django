@@ -6,9 +6,6 @@ __pycache__/
 # Database (if using SQLite)
 db.sqlite3
 
-# Django secret key and environment variables
-.env
-
 # Static and media files (optional)
 staticfiles/
 media/
