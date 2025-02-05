@@ -23,6 +23,11 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))  # Load .env file
 
 OAUTH2_JWKS_URI = env("OAUTH2_JWKS_URI")
 OAUTH2_AUDIENCE = env("OAUTH2_AUDIENCE")
+DB_NAME = env("DB_NAME")
+DB_USER = env("DB_USER")
+DB_PASSWORD = env("DB_PASSWORD")
+DB_HOST = env("DB_HOST")
+DB_PORT = env("DB_PORT")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -90,15 +95,15 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': "pg_db",
+        'NAME': DB_NAME,
 
-        'USER': 'postgres',
+        'USER': DB_USER,
 
-        'PASSWORD': 'admin',
+        'PASSWORD': DB_PASSWORD,
 
-        'HOST': 'localhost',
+        'HOST': DB_HOST,
 
-        'PORT': '5433',
+        'PORT': DB_PORT,
 
     }
 
