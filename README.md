@@ -8,101 +8,71 @@ In the project directory, you can run:
 
 ### `python manage.py runserver`
 
-To run the app in the development mode.
-Open [http://127.0.0.1:8000](http://127.0.0.1:8000) to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any errors in the console.
+To run the app in development mode. Open [http://127.0.0.1:8000](http://127.0.0.1:8000) to view it in the browser.
+The page will reload if you make edits. You will also see any errors in the console.
 
 ### `python manage.py migrate`
 
-To applies database migrations. Make sure to run this command after making changes to your models.
+To apply database migrations. Make sure to run this command after making changes to your models.
 
 ### `python manage.py makemigrations`
 
-To creates new migrations based on the changes you have made to your models.
+To create new migrations based on the changes you have made to your models.
 
 ### `python manage.py shell`
 
-To starts a Python interactive shell with Django's settings and models loaded.
+To start a Python interactive shell with Django's settings and models loaded.
 
 ## Installation
 
-To get started with this project, you have two options: using a virtual environment or installing dependencies directly.
+To get started with this project, you can either use a virtual environment or install dependencies directly.
 
-### Method 1: Using Virtual Environment
+### 1. Clone the repository
 
-1. Clone the repository:
+```bash
+git clone https://github.com/essalmiyassine/django.git
+```
 
-   ```bash
-   git clone https://github.com/essalmiyassine/django.git
-   ```
+### 2. (Optional) Create and activate a virtual environment
 
-2. Create a virtual environment:
+Using a virtual environment is recommended to isolate dependencies.
 
-   ```bash
-   python -m venv env
-   ```
+- Create a virtual environment:
 
-3. Activate the virtual environment:
+  ```bash
+  python -m venv env
+  ```
 
-   - On Windows:
+- Activate the virtual environment:
+  - On Windows:
+    ```bash
+    .\env\Scripts\activate
+    ```
+  - On macOS/Linux:
+    ```bash
+    source env/bin/activate
+    ```
 
-     ```bash
-     .\env\Scripts\activate
-     ```
+### 3. Install dependencies
 
-   - On macOS/Linux:
+```bash
+pip install -r requirements.txt
+```
 
-     ```bash
-     source env/bin/activate
-     ```
+### 4. Apply migrations
 
-4. Install the dependencies:
+```bash
+python manage.py migrate
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 5. Start the development server
 
-5. Apply migrations:
-
-   ```bash
-   python manage.py migrate
-   ```
-
-6. Start the development server:
-
-   ```bash
-   python manage.py runserver
-   ```
-
-### Method 2: Without Virtual Environment
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/essalmiyassine/django.git
-   ```
-
-2. Install the dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Apply migrations:
-
-   ```bash
-   python manage.py migrate
-   ```
-
-4. Start the development server:
-
-   ```bash
-   python manage.py runserver
-   ```
+```bash
+python manage.py runserver
+```
 
 ## Usage
 
 To use this project, follow the installation steps and start the development server.  
 You can then access the application at [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your web browser.
+
