@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `python manage.py runserver`
 
-Runs the app in the development mode.
+To run the app in the development mode.
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000) to view it in the browser.
 
 The page will reload if you make edits.
@@ -16,15 +16,15 @@ You will also see any errors in the console.
 
 ### `python manage.py migrate`
 
-Applies database migrations. Make sure to run this command after making changes to your models.
+To applies database migrations. Make sure to run this command after making changes to your models.
 
 ### `python manage.py makemigrations`
 
-Creates new migrations based on the changes you have made to your models.
+To creates new migrations based on the changes you have made to your models.
 
 ### `python manage.py shell`
 
-Starts a Python interactive shell with Django's settings and models loaded.
+To starts a Python interactive shell with Django's settings and models loaded.
 
 ## Installation
 
